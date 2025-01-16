@@ -1,0 +1,42 @@
+.main_menu_container {
+    -fx-background-color: #EEEEEE;
+    -fx-alignment: center;
+    -fx-padding: 0 10 0 10;
+}
+
+.left_container {
+    -fx-background-color: #FFFFFF;
+    -fx-backgroung-radius: 10;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5,0,0,4);
+}
+
+/*Title Logo Section*/
+.title_box_container {
+    -fx-background-color: #FFFFFF;
+}
+
+.title_box_container Label {
+    -fx-graphic: url("/Images/Icon.png");
+}
+
+
+/* Navigation Section*/
+.menu_container {
+    -fx-alignment: center;
+    -fx-label-padding: 10 10 10 20;
+    -fx-spacing: 20;
+}
+
+.menu_container Button {
+    -fx-pref-width: 115;
+    -fx-pref-height: 40;
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #132A13;
+    -fx-font-size: 1.1em;
+    -fx-alignment: center_left;
+    -fx-effect: dropshadow(two-pass-box, #DDDDDD, 5,0,0,6);
+}
+
+.menu_container Button:hover {
+    -fx-cursor: hand;
+}

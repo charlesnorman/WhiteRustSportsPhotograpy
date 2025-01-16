@@ -1,0 +1,57 @@
+
+
+.main_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.main_container Text{
+    -fx-fill: #888888;
+    -fx-font-size: 1.8em;
+    -fx-font-family: "Calibri Light";
+    -fx-spacing: 10;
+    -fx-padding: 5;
+}
+
+
+Label {
+    -fx-text-fill: #888888;
+    -fx-font-size: 1.6em;
+    -fx-font-family: "Calibri Light";
+    -fx-spacing: 10;
+    -fx-padding: 5;
+}
+
+Button {
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-font-size: 1.6em;
+    -fx-text-fill: #FFFFFF;
+    -fx-fonfamily: Calibri;
+    -fx-pref-width: 200;
+}
+
+HBox {
+    -fx-spacing: 25;
+    -fx-padding: 5;
+}
+
+HBox TextField {
+    -fx-pref-width: 400;
+}
+
+.error_lbl {
+    -fx-text-fill: #FF0000;
+}
+
+CheckBox {
+    -fx-background-color: #EEEEEE;
+    -fx-font-size: 1.6em;
+    -fx-fill: #888888;
+    -fx-fonfamily: Calibri;
+    -fx-pref-width: 250;
+}
+
+.title {
+    -fx-font-size: 2.0em;
+    -fx-fill: #222222;
+}

@@ -1,0 +1,47 @@
+
+.order_entry_container {
+    -fx-background-color: #EEEEEE;
+}
+
+.order_entry_container VBox {
+    -fx-spacing: 5;
+    -fx-padding: 5;
+}
+.order_entry_container Text{
+    -fx-fill: #888888;
+    -fx-font-size: 1.4em;
+    -fx-font-family: "Calibri Light";
+    -fx-padding: 5;
+}
+
+.order_entry_container TextField{
+    -fx-pref-width: 220;
+    -fx-pref-height: 30;
+
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+}
+
+.order_entry_container HBox{
+    -fx-spacing: 10;
+    -fx-padding: 5;
+}
+
+.order_entry_container Button {
+    -fx-background-color: linear-gradient(to right, #132A13, #253F25);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-pref-width: 150;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #FFFFFF;
+}
+
+.package_box {
+    -fx-alignment: center_left;
+}
+
+.order_entry_container Button:hover {
+    -fx-cursor: hand;
+}
+
+
