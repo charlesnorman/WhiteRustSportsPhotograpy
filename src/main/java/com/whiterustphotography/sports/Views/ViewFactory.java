@@ -99,7 +99,7 @@ public class ViewFactory {
         }
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.setTitle("Sports Photography");
+        stage.setTitle("White Rust Sports Photography");
         stage.setResizable(false);
         stage.show();
     }

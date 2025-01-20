@@ -27,7 +27,7 @@ Button {
     -fx-font-size: 1.6em;
     -fx-text-fill: #FFFFFF;
     -fx-fonfamily: Calibri;
-    -fx-pref-width: 200;
+    -fx-pref-width: 100;
 }
 
 HBox {
@@ -36,11 +36,17 @@ HBox {
 }
 
 HBox TextField {
-    -fx-pref-width: 400;
+    -fx-pref-width: 600;
+    -fx-background-color: #CCCCCC;
+    -fx-font-size: 1.6em;
 }
 
-.error_lbl {
+.error_tfld {
     -fx-text-fill: #FF0000;
+    -fx-fonfamily: Calibri;
+    -fx-font-size: 1.6em;
+    -fx-background-color: #EEEEEE;
+
 }
 
 CheckBox {
@@ -54,4 +60,20 @@ CheckBox {
 .title {
     -fx-font-size: 2.0em;
     -fx-fill: #222222;
+}
+.title_container {
+    -fx-alignment: center;
+}
+
+.directory_container {
+    -fx-alignment: center;
+    -fx-border-width: 2;
+    -fx-border-insets: 5;
+    -fx-padding: 5;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5;
+}
+
+.rename_button_container {
+    -fx-alignment: center;
 }

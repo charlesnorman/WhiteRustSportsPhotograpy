@@ -6,8 +6,9 @@ import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,27 +23,47 @@ public class RenameFilesController implements Initializable {
 
 
     public Button rename_files_btn;
-    public Label error_lbl;
+    public TextArea error_tfld;
     public TextField source_directory_fld;
     public TextField destination_directory_fld;
     public TextField name_fld;
     public TextField tag_fld;
+    public Button src_file_chooser_btn;
+    public Button dst_file_chooser_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        error_lbl.setText("");
+        error_tfld.setText("");
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+
+        src_file_chooser_btn.setOnAction(_ -> {
+            File file = directoryChooser.showDialog(null);
+            if (file != null) {
+                source_directory_fld.setText(file.getAbsolutePath());
+            }
+        });
+
+        dst_file_chooser_btn.setOnAction(_ -> {
+            File file = directoryChooser.showDialog(null);
+            if (file != null) {
+                destination_directory_fld.setText(file.getAbsolutePath());
+            }
+        });
 
         rename_files_btn.setOnAction(_ -> {
             final boolean[] tagFound = {false};
             try {
                 DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(source_directory_fld.getText()));
-                /*Iterate through each file in the directory*/
+
+                /*Start iterate through each source file*/
                 directoryStream.forEach(file -> {
                     File originalFile = new File(file.toString());
                     String originalFileName = originalFile.getName();
                     File renamedFile = new File(destination_directory_fld.getText() +
-                            File.separator + name_fld.getText().replaceAll("\s+", "_") + originalFileName.substring(4));
+                            File.separator +
+                            name_fld.getText().replaceAll("\s+", "_") + "_"
+ +                            originalFileName.substring(4) );
                     Metadata metadata;
 
                     try {
@@ -54,9 +75,10 @@ public class RenameFilesController implements Initializable {
                         for (Directory directory : metadata.getDirectories()) {
                             for (Tag tag : directory.getTags()) {
                                 if (tag.toString().contains("User Comment")) {
-                                    if (getCommentTag(tag) == Long.parseLong(tag_fld.getText())) {
+                                    //System.out.println(tag.getDescription());
+                                    if (getCommentTagAsLong(tag) == getTagFieldAsLong(tag_fld.getText(), name_fld.getText())) {
                                         try {
-                                            Files.copy(originalFile.toPath(),renamedFile.toPath());
+                                            Files.copy(originalFile.toPath(), renamedFile.toPath());
                                             tagFound[0] = true;
                                         } catch (IOException e) {
                                             throw new RuntimeException(e);
@@ -67,22 +89,41 @@ public class RenameFilesController implements Initializable {
                             }
                         }
                     }
+                }); /* End Iterate through each source file*/
 
-                }); /*Iterate through each file*/
-                if(!tagFound[0]) {
-                    error_lbl.setText("Tag " + tag_fld.getText() + " for " + name_fld.getText() + " not found");
+                if (!tagFound[0]) {
+                    error_tfld.setText("Tag " + tag_fld.getText() + " for " + name_fld.getText() + " not found");
                 }
+            } catch (Exception e) {
+                error_tfld.setText(e.getMessage());
+            } finally {
                 tag_fld.setText("");
                 name_fld.setText("");
-
-            } catch (Exception e) {
-                error_lbl.setText(e.getMessage());
             }
 
         });
     }
 
-    public static long getCommentTag(Tag tag) {
-        return   Long.parseLong(tag.getDescription());
+    private static long getCommentTagAsLong(Tag tag) {
+        long result;
+        try {
+            result = Long.parseLong(tag.getDescription());
+        } catch (NumberFormatException e) {
+            throw new RuntimeException(
+
+                    "Illegal photo tag: " + e.getMessage() + "\n" + e);
+        }
+        return result;
+    }
+
+    private static long getTagFieldAsLong(String number, String name) {
+        long result;
+        try {
+            result = Long.parseLong(number);
+        } catch (NumberFormatException e) {
+            throw new RuntimeException(
+                    "Illegal input tag for " + name + "\n" + e.getMessage() + "\n" + e);
+        }
+        return result;
     }
 }
