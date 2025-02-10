@@ -1,14 +1,12 @@
-package com.whiterustphotography.sports.Views;
+package com.whiterustphotography.sports.gui.Views;
 
-import com.whiterustphotography.sports.Controllers.AppController;
+import com.whiterustphotography.sports.gui.Controllers.AppController;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class ViewFactory {
 
@@ -31,7 +29,7 @@ public class ViewFactory {
     public AnchorPane getPrintBarCodeView() {
         if(printBarCodeView == null) {
             try{
-                printBarCodeView = new FXMLLoader(getClass().getResource("/Fxml/PrintBarcodes.fxml")).load();
+                printBarCodeView = new FXMLLoader(getClass().getResource("/com/whiterustphotography/sports/gui/Fxml/PrintBarcodes.fxml")).load();
             }catch (Exception e) {
                 e.printStackTrace();
             }
@@ -42,7 +40,7 @@ public class ViewFactory {
     public AnchorPane getHomeView() {
         if(homeView == null) {
             try{
-                homeView = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml")).load();
+                homeView = new FXMLLoader(getClass().getResource("/com/whiterustphotography/sports/gui/Fxml/Home.fxml")).load();
             }catch (Exception e) {
                 e.printStackTrace();
             }
@@ -53,7 +51,7 @@ public class ViewFactory {
     public AnchorPane getMenuView() {
         if(menuView == null) {
             try {
-                menuView = new FXMLLoader(getClass().getResource("/Fxml/Menu.fxml")).load();
+                menuView = new FXMLLoader(getClass().getResource("/com/whiterustphotography/sports/gui/Fxml/Menu.fxml")).load();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -64,7 +62,7 @@ public class ViewFactory {
     public AnchorPane getOrderEntryView() {
         if(orderEntryView == null) {
             try{
-                orderEntryView = new FXMLLoader(getClass().getResource("/Fxml/OrderEntry.fxml")).load();
+                orderEntryView = new FXMLLoader(getClass().getResource("/com/whiterustphotography/sports/gui/Fxml/OrderEntry.fxml")).load();
             }catch(Exception e) {
                 e.printStackTrace();
             }
@@ -75,7 +73,7 @@ public class ViewFactory {
     public AnchorPane getRenameFilesView() {
         if(renameFilesView == null) {
             try{
-                renameFilesView = new FXMLLoader(getClass().getResource("/Fxml/RenameFile.fxml")).load();
+                renameFilesView = new FXMLLoader(getClass().getResource("/com/whiterustphotography/sports/gui/Fxml/RenameFile.fxml")).load();
             }catch(Exception e) {
                 e.printStackTrace();
             }
@@ -84,7 +82,7 @@ public class ViewFactory {
     }
 
     public void showAppWindow(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/App.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/whiterustphotography/sports/gui/Fxml/App.fxml"));
         AppController appController = new AppController();
         loader.setController(appController);
         createStage(loader);

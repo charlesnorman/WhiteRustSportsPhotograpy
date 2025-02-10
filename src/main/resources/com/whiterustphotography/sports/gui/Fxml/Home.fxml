@@ -5,6 +5,6 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.whiterustphotography.sports.Controllers.HomeController">
+            fx:controller="com.whiterustphotography.sports.gui.Controllers.HomeController">
 
 </AnchorPane>

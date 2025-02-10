@@ -1,4 +1,4 @@
-package com.whiterustphotography.sports.Controllers;
+package com.whiterustphotography.sports.gui.Controllers;
 
 import com.drew.imaging.ImageMetadataReader;
 import com.drew.metadata.Directory;

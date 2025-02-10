@@ -1,4 +1,4 @@
-package com.whiterustphotography.sports.Controllers;
+package com.whiterustphotography.sports.gui.Controllers;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

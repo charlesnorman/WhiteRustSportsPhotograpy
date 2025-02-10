@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="180.0" styleClass="main_menu_container" stylesheets="@../Styles/Menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.whiterustphotography.sports.Controllers.MenuController">
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="180.0" styleClass="main_menu_container" stylesheets="@../Styles/Menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.whiterustphotography.sports.gui.Controllers.MenuController">
     <AnchorPane prefHeight="800.0" prefWidth="180.0" styleClass="left_container">
         <VBox layoutY="14.0" prefHeight="200.0" prefWidth="160.0" styleClass="title_box_container" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <Label />
@@ -18,7 +18,7 @@
             <Button fx:id="organizations_menu_btn" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" text="Organizations" />
             <Button fx:id="add_ons_menu_btn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" text="Add Ons" />
             <Button fx:id="packages_menu_btn" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" text="Packages" />
+         <Button fx:id="exit_btn" mnemonicParsing="false" text="Exit" />
         </VBox>
-        <VBox layoutX="10.0" layoutY="586.0" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="14.0" />
     </AnchorPane>
 </VBox>

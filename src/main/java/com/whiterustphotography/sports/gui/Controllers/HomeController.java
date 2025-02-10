@@ -1,6 +1,5 @@
-package com.whiterustphotography.sports.Controllers;
+package com.whiterustphotography.sports.gui.Controllers;
 
-import com.whiterustphotography.sports.Models.Model;
 import javafx.fxml.Initializable;
 
 import java.net.URL;

@@ -1,6 +1,6 @@
-package com.whiterustphotography.sports.Models;
+package com.whiterustphotography.sports.gui.Models;
 
-import com.whiterustphotography.sports.Views.ViewFactory;
+import com.whiterustphotography.sports.gui.Views.ViewFactory;
 
 
 public class Model {

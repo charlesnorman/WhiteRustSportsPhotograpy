@@ -1,7 +1,7 @@
-package com.whiterustphotography.sports.Controllers;
+package com.whiterustphotography.sports.gui.Controllers;
 
-import com.whiterustphotography.sports.Models.Model;
-import com.whiterustphotography.sports.Views.MenuOptions;
+import com.whiterustphotography.sports.gui.Models.Model;
+import com.whiterustphotography.sports.gui.Views.MenuOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 

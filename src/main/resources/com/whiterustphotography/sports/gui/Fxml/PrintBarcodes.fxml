@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="600.0" styleClass="printBarcode_container" stylesheets="@../Styles/PrintBarcode.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.whiterustphotography.sports.Controllers.PrintBarcodesController">
+<AnchorPane prefHeight="750.0" prefWidth="600.0" styleClass="printBarcode_container" stylesheets="@../Styles/PrintBarcode.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.whiterustphotography.sports.gui.Controllers.PrintBarcodesController">
     <VBox fillWidth="false" layoutX="14.0" layoutY="14.0" prefHeight="250.0" prefWidth="850.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
         <HBox fillHeight="false">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Print Barcode Labels" />

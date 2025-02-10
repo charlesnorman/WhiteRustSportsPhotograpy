@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane styleClass="main_container" stylesheets="@../Styles/RenameFiles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.whiterustphotography.sports.Controllers.RenameFilesController">
+<AnchorPane styleClass="main_container" stylesheets="@../Styles/RenameFiles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.whiterustphotography.sports.gui.Controllers.RenameFilesController">
     <VBox layoutX="10.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="600.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <VBox>
             <HBox prefHeight="75.0" prefWidth="200.0" styleClass="title_container">

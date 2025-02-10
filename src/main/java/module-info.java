@@ -7,8 +7,8 @@ module com.whiterustphotography.sports {
 
     opens com.whiterustphotography.sports to javafx.fxml;
     exports com.whiterustphotography.sports;
-    exports com.whiterustphotography.sports.Controllers;
-    exports com.whiterustphotography.sports.Models;
-    exports com.whiterustphotography.sports.Views;
+    exports com.whiterustphotography.sports.gui.Controllers;
+    exports com.whiterustphotography.sports.gui.Models;
+    exports com.whiterustphotography.sports.gui.Views;
 
 }

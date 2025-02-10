@@ -1,6 +1,6 @@
 package com.whiterustphotography.sports;
 
-import com.whiterustphotography.sports.Models.Model;
+import com.whiterustphotography.sports.gui.Models.Model;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

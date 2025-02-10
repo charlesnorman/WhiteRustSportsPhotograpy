@@ -1,7 +1,7 @@
-package com.whiterustphotography.sports.Controllers;
+package com.whiterustphotography.sports.gui.Controllers;
 
-import com.whiterustphotography.sports.Models.Model;
-import com.whiterustphotography.sports.Views.MenuOptions;
+import com.whiterustphotography.sports.gui.Models.Model;
+import com.whiterustphotography.sports.gui.Views.MenuOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -16,6 +16,7 @@ public class MenuController implements Initializable {
     public Button add_ons_menu_btn;
     public Button packages_menu_btn;
     public Button print_barcodes_menu_btn;
+    public Button exit_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -27,6 +28,7 @@ public class MenuController implements Initializable {
         print_barcodes_menu_btn.setOnAction(event -> onPrintBarCodes());
         order_entry_menu_btn.setOnAction(event -> onOrderEntry());
         rename_files_menu_btn.setOnAction(event -> onRenameFiles());
+        exit_btn.setOnAction(event -> exit());
     }
 
     private void onPrintBarCodes(){
@@ -37,6 +39,10 @@ public class MenuController implements Initializable {
     }
     private void onRenameFiles(){
         Model.getInstance().getViewFactory().getMenuSelectedOption().set(MenuOptions.RENAME_FILES);
+    }
+
+    private void exit(){
+        System.exit(0);
     }
 
 

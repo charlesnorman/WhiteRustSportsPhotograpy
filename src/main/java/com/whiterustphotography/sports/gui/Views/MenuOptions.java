@@ -1,4 +1,4 @@
-package com.whiterustphotography.sports.Views;
+package com.whiterustphotography.sports.gui.Views;
 
 public enum MenuOptions {
     ORDER_ENTRY,
